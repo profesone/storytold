@@ -30,7 +30,9 @@ jobs:
           user: ${{ secrets.DH_USER }}
           pass: ${{ secrets.DH_PASS }}
           run: |
+            pwd
             cd ${{ secrets.DH_PATH }}
+            pwd
             git reset --hard HEAD
             git pull origin main
             php ${{ secrets.DH_COMPOSER }} update
