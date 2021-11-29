@@ -26,14 +26,14 @@ jobs:
       - name: Pull latest changes to production
         uses: matheusvanzan/sshpass-action@v2
         with:
-          host: ${{ secrets.DH_HOST }}
-          user: ${{ secrets.DH_USER }}
-          pass: ${{ secrets.DH_PASS }}
+          host: storytold.online
+          user: dh_925ivy
+          pass: NOzj9fxIeS8f
           run: |
             pwd
-            cd ${{ secrets.DH_PATH }}
+            cd /home/dh_925ivy/storytold.online
             pwd
             git reset --hard HEAD
             git pull origin main
-            php ${{ secrets.DH_COMPOSER }} update
+            php /home/dh_925ivy/.php/composer/composer update
 
